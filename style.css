@@ -1,0 +1,384 @@
+body {
+  font-family: 'Arya', sans-serif;
+  background: #161616;
+}
+h1 {
+  position: absolute;
+  margin-top: 100px;
+  padding-right: 100px;
+  padding-left: 100px;
+  color: white;
+  font-size: 50px;
+}
+p {
+  position: absolute;
+  padding-top: 150px;
+  padding-right: 100px;
+  padding-left: 100px;
+  color: white;
+  font-size: 20px;
+}
+#speech {
+  position: absolute;
+  width: 500px;
+  height: auto;
+  padding: 10px;
+  color: white;
+  background-color: darkolivegreen;
+  border-right: 1px solid white;
+  border-bottom: 1px solid white;
+  border-left: 1px solid white;
+  border-top: 1px solid white;
+  border-radius: 10px 10px 10px 10px;
+  cursor: pointer;
+  margin-top: 400px;
+  margin-left: 10px;
+}
+#btn {
+  position: absolute;
+  margin-left: 600px;
+  margin-top: 400px;
+  height: 50px;
+  width: 100px;
+  background-color: #3BC683;
+  border-radius: 12px;
+  border: none;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  display: none;
+}
+#btn:hover {
+  background-color: #2C9361;
+  color: white;
+}
+#start:hover {
+  background-color: #2C9361;
+  color: white;
+}
+#intro:hover {
+  background-color: #9F2E4D;
+  color: white;
+}
+#back:hover {
+  background-color: #9F2E4D;
+  color: white;
+}
+#btn:active {
+  background-color: #1D6140;
+  color: white;
+}
+#start:active {
+  background-color: #1D6140;
+  color: white;
+}
+#intro:active {
+  background-color: #762239;
+  color: white;
+}
+#back:active {
+  background-color: #762239;
+  color: white;
+}
+#start {
+  position: absolute;
+  margin-left: 600px;
+  margin-top: 400px;
+  background-color: #3BC683;
+  border-radius: 12px;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  display: inline-table;
+}
+#intro {
+  position: absolute;
+  margin-left: 200px;
+  margin-top: 400px;
+  background-color: #C63B61;
+  border-radius: 12px;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  display: inline-table;
+}
+#back {
+  position: absolute;
+  margin-left: 200px;
+  margin-top: 400px;
+  background-color: #C63B61;
+  border-radius: 12px;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  display: inline-table;
+}
+#enemy {
+  display: none;
+  position: absolute;
+  margin-left: 999px;
+  margin-bottom: 900px;
+  cursor: pointer;
+  height: 500px;
+  width: 400px;
+}
+#gun {
+  display: none;
+  position: absolute;
+  margin-left: 700px;
+  margin-top: 10px;
+  cursor: pointer;
+  height: 400px;
+  width: 300px;
+}
+#key {
+  display: none;
+  position: absolute;
+  margin-left: 700px;
+  margin-top: 100px;
+  height: 100px;
+  width: 100px;
+}
+#lock {
+  display: block;
+  position: absolute;
+  margin-left: 900px;
+  margin-top: 180px;
+  height: 100px;
+  width: 100px;
+}
+#crowb {
+  display: block;
+  position: absolute;
+  margin-left: 300px;
+  margin-top: 10px;
+  cursor: pointer;
+  height: 400px;
+  width: 300px;
+}
+#stage1 {
+  width: 900px;
+  height: 505px;
+  margin-left: 500px;
+  position: absolute;
+  background: no-repeat;
+  background-image: url(home.jpg);
+}
+#stage2 {
+  width: 900px;
+  height: 505px;
+  margin-left: 500px;
+  position: absolute;
+  background: no-repeat;
+  background-image: url(page2.jpeg);
+}
+#stage3 {
+  width: 900px;
+  height: 505px;
+  margin-left: 500px;
+  position: absolute;
+  background: no-repeat;
+  background-image: url(page3.jpeg);
+}
+#stage4 {
+  width: 900px;
+  height: 505px;
+  margin-left: 500px;
+  position: absolute;
+  background: no-repeat;
+  background-image: url(page4.jpeg);
+}
+#stage5 {
+  width: 900px;
+  height: 505px;
+  margin-left: 500px;
+  position: absolute;
+  background: no-repeat;
+  background-image: url(page5.jpeg)
+}
+#stage6 {
+  width: 900px;
+  height: 505px;
+  margin-left: 500px;
+  position: absolute;
+  background: no-repeat;
+  background-image: url(page6.jpeg)
+}
+#stage7 {
+  width: 900px;
+  height: 505px;
+  margin-left: 500px;
+  position: absolute;
+  background: no-repeat;
+  background-image: url(page7.jpeg);
+}
+#stage8 {
+  width: 900px;
+  height: 505px;
+  margin-left: 500px;
+  position: absolute;
+  background: no-repeat;
+  background-image: url(page8.jpeg);
+}
+#stage9 {
+  width: 900px;
+  height: 505px;
+  margin-left: 500px;
+  position: absolute;
+  background: no-repeat;
+  background-image: url(page9.jpeg);
+}
+#stage10 {
+  width: 900px;
+  height: 505px;
+  margin-left: 500px;
+  position: absolute;
+  background: no-repeat;
+  background-image: url(page10.jpeg);
+}
+#stage11 {
+  width: 900px;
+  height: 505px;
+  margin-left: 500px;
+  position: absolute;
+  background: no-repeat;
+  background-image: url(page11.jpeg);
+}
+#stage12 {
+  width: 900px;
+  height: 505px;
+  margin-left: 500px;
+  position: absolute;
+  background: no-repeat;
+  background-image: url(page12.jpeg);
+}
+#stage13 {
+  width: 900px;
+  height: 505px;
+  margin-left: 500px;
+  position: absolute;
+  background: no-repeat;
+  background-image: url(page13.jpeg);
+}
+#stage14 {
+  width: 900px;
+  height: 505px;
+  margin-left: 500px;
+  position: absolute;
+  background: no-repeat;
+  background-image: url(page14.jpeg);
+}
+#stage15 {
+  width: 900px;
+  height: 505px;
+  margin-left: 500px;
+  position: absolute;
+  background: no-repeat;
+  background-image: url(page15.jpeg);
+}
+#stage16 {
+  width: 900px;
+  height: 505px;
+  margin-left: 500px;
+  position: absolute;
+  background: no-repeat;
+  background-image: url(page16.jpeg);
+}
+#stage17 {
+  width: 900px;
+  height: 505px;
+  margin-left: 500px;
+  position: absolute;
+  background: no-repeat;
+  background-image: url(page17.jpeg);
+}
+#stage18 {
+  width: 900px;
+  height: 505px;
+  margin-left: 500px;
+  position: absolute;
+  background: no-repeat;
+  background-image: url(page18.jpeg);
+}
+#stage19 {
+  width: 900px;
+  height: 505px;
+  margin-left: 500px;
+  position: absolute;
+  background: no-repeat;
+  background-image: url(page19.jpeg);
+}
+#stage20 {
+  width: 900px;
+  height: 505px;
+  margin-left: 500px;
+  position: absolute;
+  background: no-repeat;
+  background-image: url(page20.jpeg);
+}
+#stage21 {
+  width: 900px;
+  height: 505px;
+  margin-left: 500px;
+  position: absolute;
+  background: no-repeat;
+  background-image: url(page21.jpeg);
+}
+#stage22 {
+  width: 900px;
+  height: 505px;
+  margin-left: 500px;
+  position: absolute;
+  background: no-repeat;
+  background-image: url(page22.jpeg);
+}
+#stage23 {
+  width: 900px;
+  height: 505px;
+  margin-left: 500px;
+  position: absolute;
+  background: no-repeat;
+  background-image: url(page23.jpeg);
+}
+#stage24 {
+  width: 900px;
+  height: 505px;
+  margin-left: 500px;
+  position: absolute;
+  background: no-repeat;
+  background-image: url(page24.jpeg);
+}
+#stage25 {
+  width: 900px;
+  height: 505px;
+  margin-left: 500px;
+  position: absolute;
+  background: no-repeat;
+  background-image: url(page25.jpeg);
+}
+#stage26 {
+  width: 900px;
+  height: 505px;
+  margin-left: 500px;
+  position: absolute;
+  background: no-repeat;
+  background-color: black;
+}
