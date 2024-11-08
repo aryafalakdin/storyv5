@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Arya:wght@400;700&display=swap" rel="stylesheet">
+<meta charset="utf-8">
+<title>The Abandoned House</title>
+<link href="style.css" rel="stylesheet" />
+<script src="jquery-3.6.0.min.js"></script> 
+<script>
+$(document).ready(function() { // do not delete this line
+	
+	var progress = 0;
+	var txt;
+    const hover = new Audio("hover.mp3");
+    const click = new Audio("click.mp3");
+    
+    $('#btn').mouseenter(e => hover.play());
+    $('#btn').mousedown(e => click.play());
+
+	function eventHandler() {
+		if(progress==0) {
+        	txt = "I'll call the authorities in the morning";
+            
+        }
+        if(progress==1) {
+        	txt = "Right now i'm to tired to do anything.";
+        }
+    	if(progress==2) {
+        	txt = "Goodnight!.";
+            $('#btn').show();
+        }
+        progress++;
+        $('#speech').html(txt);
+	}
+
+	$('#speech').click(eventHandler);
+
+}); // do not delete this line
+
+</script>
+</head>
+<body>
+<div id="stage25"> <a href="end.html">
+  <button id="btn">NEXT</button>
+  </a>
+  <div id="speech">Well i guess this is the end.</div>
+</div>
+<audio autoplay>
+  <source src="door.mp3" type="audio/wav">
+</audio>
+</body>
+</html>

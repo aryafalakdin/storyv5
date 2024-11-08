@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en"> 
+<head>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Arya:wght@400;700&display=swap" rel="stylesheet">
+<meta charset="utf-8">
+<title>The Abandoned House</title>
+<link href="style.css" rel="stylesheet" />
+<script src="jquery-3.6.0.min.js"></script>
+<script>
+$(document).ready(function() { // do not delete this line
+	
+	var progress = 0;
+	var txt;
+    var clickProgress = true;
+    var audio1 = new Audio('pistal.mp3');
+    var audio2 = new Audio('key.mp3');
+    const hover = new Audio("hover.mp3");
+    const click = new Audio("click.mp3");
+    
+    $('#btn').mouseenter(e => hover.play());
+    $('#btn').mousedown(e => click.play());
+	
+    function eventHandler() {
+        console.log("evt handler")
+		if(progress==0 ) {
+        	txt = "UNKOWN PERSON: What are you doing here!";
+            $('#enemy').show();
+           
+            
+             
+        }
+        
+        if(progress==1) {
+        	txt = "Who the heck are you and what is this place?";
+            
+        }
+    	if(progress==2) {
+       	txt = "UNKOWN PERSON: Thats not your concern, leave now or die.";
+        }
+        if(progress==3) {
+        	txt = "I could use the gun here [Click on the clown to slay them].";
+            clickProgress = false;
+          
+
+                document.getElementById( "enemy" ).onclick = function() {   
+                    console.log("enemy click")
+                    clickProgress = true;
+                    progress++;
+                    $('#enemy').hide();
+                    audio1.play();
+                }  
+                
+                    
+                
+                
+            }
+                 
+            
+        
+        if(progress==4) {
+         	txt = "UNKOWN PERSON: Don't worry you will see whats coming!";
+            $('#gun').show(), function(){
+               
+            }
+
+        }
+       if(progress==5) {
+        	txt = "Hopefully i wont find out. [Click on the key to pick it up]";
+            clickProgress = false;
+          
+
+                document.getElementById( "gun" ).onclick = function() {   
+                    console.log("enemy click")
+                    clickProgress = true;
+                    progress++;
+                    $('#gun').hide();
+                    audio2.play();
+                }
+                   
+                    
+                
+                
+            }
+        if(progress==6) {
+        	txt = "Ah a key. Wonder what it unlocks.";
+           $('#btn').show();
+        }
+        $('#speech').html(txt);
+        if (clickProgress) {
+            progress++;
+        }       
+	}
+
+	$('#speech').click(eventHandler);
+
+}); // do not delete this line
+
+</script>
+</head>
+<body>
+    <div id="stage15">
+    <a href="page16.html"><button id="btn">NEXT</button></a>
+    <div id="speech">Alright i think i'm safe for now, wait what is this place?</div>
+</div>
+ <div>
+    <img src="clonw.png" id="enemy" alt="clown" width="400" height="400">
+    <img src="key.png" id="gun" alt="phone" width="200" height="200">
+</div>
+
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Arya:wght@400;700&display=swap" rel="stylesheet">
+<meta charset="utf-8">
+<title>The lost book</title>
+<link href="style.css" rel="stylesheet" />
+<script src="jquery-3.6.0.min.js"></script>
+<script>
+$(document).ready(function() { // do not delete this line
+	
+    var progress = 0;
+	var txt;
+	var clickProgress = true; 
+    var audio = new Audio('pickup.wav');
+    const hover = new Audio("hover.mp3");
+    const click = new Audio("click.mp3");
+    
+    $('#btn').mouseenter(e => hover.play());
+    $('#btn').mousedown(e => click.play());
+
+	function eventHandler() {
+	if(progress==0) {
+        	txt = "Wait what's that? [Click on thee crowbar to pick it up]";
+            clickProgress = false;
+          
+
+                document.getElementById( "crowb" ).onclick = function() {   
+                    console.log("crowb click")
+                    clickProgress = true;
+                    progress++;
+                    $('#crowb').hide();
+					audio.play();
+                }
+                   
+                    
+                
+                
+            }
+        if(progress==1) {
+        	txt = "Ah it's a crowbar, could use that.";
+        }
+    	if(progress==2) {
+        	txt = "I should keep moving.";
+			$('#btn').show();
+        }
+        $('#speech').html(txt);
+		if (clickProgress) {
+        	progress++;
+        }  
+	}
+
+	$('#speech').click(eventHandler);
+
+}); // do not delete this line
+
+</script>
+</head>
+<body>
+<div id="stage3">
+    <a href="page4.html"><button id="btn">NEXT</button></a>
+		
+    <img src="crowb.png" id="crowb" alt="crowbar">
+    <div id="speech">Ah where am i</div>
+</div>
+<audio autoplay loop>
+        <source src="ambient.mp3" type="audio/wav">
+        
+</audio>
+</body>
+</html>

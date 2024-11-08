@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Arya:wght@400;700&display=swap" rel="stylesheet">
+<meta charset="utf-8">
+<title>The Abandoned House</title>
+<link href="style.css" rel="stylesheet" />
+<script src="jquery-3.6.0.min.js"></script>
+<script>
+$(document).ready(function() { 
+const hover = new Audio("hover.mp3");
+const click = new Audio("click.mp3");
+
+
+$('#start').mouseenter(e => hover.play());
+$('#start').mousedown(e => click.play());
+
+$('#intro').mouseenter(e => hover.play());
+$('#intro').mousedown(e => click.play());
+
+
+    
+
+});
+</script>
+</head>
+<body>
+    <div id="stage1">
+        <h1>The Abandoned House</h1>
+        <p>You need to find a way to escape.</p>
+    
+    <a href="page2.html"><button id="start">Play</button></a>
+    <a href="intro.html"><button id="intro">Intro</button></a>   
+    </div>
+</body>
+</html>

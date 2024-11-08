@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Arya:wght@400;700&display=swap" rel="stylesheet">
+<meta charset="utf-8">
+<title>The Abandoned House</title>
+<link href="style.css" rel="stylesheet" />
+<script src="jquery-3.6.0.min.js"></script>
+<script>
+$(document).ready(function() { 
+    const hover = new Audio("hover.mp3");
+    const click = new Audio("click.mp3");
+    
+    $('#back').mouseenter(e => hover.play());
+    $('#back').mousedown(e => click.play());
+
+});
+</script>
+</head>
+<body>
+    <div id="stage26">
+        <h1>The End</h1>
+        <p>You did it! After having a nap you managed to call 000. Police officers immediately arrived on scene to take your statement. Now it's in their hands to find out what happened.</p>
+    
+    <a href="index.html"><button id="back">Play again?</button></a>
+    </div>
+</body>
+</html>

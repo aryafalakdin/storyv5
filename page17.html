@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Arya:wght@400;700&display=swap" rel="stylesheet">
+<meta charset="utf-8">
+<title>The Abandoned House</title>
+<link href="style.css" rel="stylesheet" />
+<script src="jquery-3.6.0.min.js"></script>
+<link href="jquery-ui.css" rel="stylesheet" />
+<script src="jquery-ui.js"></script> 
+<script>
+$(document).ready(function() { // do not delete this line
+	
+	var progress = 0;
+	var txt;
+    var clickProgress = true;
+    var audio1 = new Audio('unlock.mp3');
+    const hover = new Audio("hover.mp3");
+    const click = new Audio("click.mp3");
+    
+    $('#btn').mouseenter(e => hover.play());
+    $('#btn').mousedown(e => click.play());
+
+	function eventHandler() {
+		if(progress==0) {
+        	txt = "Hmm there is a window.";
+        $('#key').show();
+    
+    $("#key").draggable({                       //key image
+        revert: true,
+        cursor: "grabbing" 
+    });
+   
+            
+    $("#lock").droppable({                          //lock image
+        
+        accept: "#key",
+        drop: function (ev, ui){    //shows #btn when dragging #key
+            $("#btn").show();
+            audio1.play();
+            $("#key").hide();
+        }
+    }
+    
+    
+    );
+        }
+        if(progress==1) {
+        	txt = "Hmm...";
+        }
+    	if(progress==2) {
+        	txt = "Maybe i can use the key picked up from the clown on that window. [Drag and drop the key to continue]";
+			
+        }
+        progress++;
+        $('#speech').html(txt);
+	}
+
+	$('#speech').click(eventHandler);
+
+}); // do not delete this line
+</script>
+</head>
+<body>
+<div id="stage17"> <a href="page18.html">
+  <button id="btn">NEXT</button>
+  </a>
+  <div id="speech">Again more chairs.</div>
+</div>
+<img src="key.png" id="key" alt="key">
+<img src="lock.png" id="lock" alt="lock">
+</body>
+</html>
